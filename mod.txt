@@ -1,0 +1,22 @@
+{
+	"name" : "Old Screen Flash",
+	"description" : "Restoration old screen flash instead yellowgreen",
+	"author" : "Shane",
+	"Contact" : "https://steamcommunity.com/id/Shane1230/",
+	"version" : "1.0",
+	"priority": 1,
+	"hooks": [
+		{ 
+			"hook_id" : "core/lib/managers/coreenvironmentcontrollermanager",
+			"script_path" : "OSF.lua"
+		}
+	],
+	"updates": [
+        {
+		"identifier": "osf",
+		"host": {
+		"meta": "https://raw.githubusercontent.com/Shane1230/autoupdate/main/OSF"
+	 	}
+	}
+	]
+}
