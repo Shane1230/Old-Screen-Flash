@@ -1,7 +1,7 @@
 --U231
 --local flashbang_test_offset = Vector3(0, 0, 150)
 --local debug_vec1 = Vector3()
-local temp_vec_1 = Vector3()
+--[[local temp_vec_1 = Vector3()
 local temp_vec_2 = Vector3()
 --CoreEnvironmentControllerManager = CoreEnvironmentControllerManager or class()
 
@@ -293,4 +293,4 @@ end
 
 function CoreEnvironmentControllerManager:clbk_screenflash_color_changed(setting_name, old_color_name, new_color_name)
 	self:set_screenflash_color(new_color_name)
-end
+end--]]
