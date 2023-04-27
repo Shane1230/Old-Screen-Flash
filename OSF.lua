@@ -1,80 +1,9 @@
 --U231
 --local flashbang_test_offset = Vector3(0, 0, 150)
 --local debug_vec1 = Vector3()
---[[local temp_vec_1 = Vector3()
+local temp_vec_1 = Vector3()
 local temp_vec_2 = Vector3()
 --CoreEnvironmentControllerManager = CoreEnvironmentControllerManager or class()
-
-function CoreEnvironmentControllerManager:init()
-	self._DEFAULT_DOF_DISTANCE = 10
-	self._dof_distance = self._DEFAULT_DOF_DISTANCE
-	self._current_dof_distance = self._dof_distance
-
-	if _G.IS_VR then
-		self._chromatic_enabled = false
-	else
-		self._chromatic_enabled = true
-	end
-
-	self._base_chromatic_amount = 0.15
-	self._base_contrast = 0.1
-	self._hurt_value = 1
-	self._taser_value = 1
-	self._health_effect_value = 1
-	self._suppression_value = 0
-	self._current_suppression_value = 0
-	self._old_suppression_value = 0
-	self._supression_start_flash = 0
-	self._old_health_effect_value = 1
-	self._health_effect_value_diff = 0
-	self._buff_effect_value = 0
-	self._GAME_DEFAULT_COLOR_GRADING = "color_off"
-	self._default_color_grading = self._GAME_DEFAULT_COLOR_GRADING
-	self._ignore_user_color_grading = false
-	self._blurzones = {}
-	self._hit_right = 0
-	self._hit_left = 0
-	self._hit_up = 0
-	self._hit_down = 0
-	self._hit_front = 0
-	self._hit_back = 0
-	self._hit_some = 0
-	self._hit_amount = 0.3
-	self._hit_cap = 1
-	self._current_flashbang = 0
-	self._current_flashbang_flash = 0
-	self._flashbang_multiplier = 1
-	self._flashbang_duration = 1
-	self._current_concussion = 0
-	self._concussion_multiplier = 1
-	self._concussion_duration = 1
-	self._HE_blinding = 0
-	self._downed_value = 0
-	self._last_life = false
-
-	self:_create_dof_tweak_data()
-
-	self._current_dof_setting = "standard"
-	self._near_plane_x = self._dof_tweaks[self._current_dof_setting].steelsight.near_plane_x
-	self._near_plane_y = self._dof_tweaks[self._current_dof_setting].steelsight.near_plane_y
-	self._far_plane_x = self._dof_tweaks[self._current_dof_setting].steelsight.far_plane_x
-	self._far_plane_y = self._dof_tweaks[self._current_dof_setting].steelsight.far_plane_y
-	self._dof_override = false
-	self._dof_override_near = 5
-	self._dof_override_near_pad = 5
-	self._dof_override_far = 5000
-	self._dof_override_far_pad = 1000
-
-	self:set_dome_occ_default()
-
-	self._default_fov_value = 75
-	self._current_fov_value = 75
-	self._fov_ratio = 1
-	self._screenflash_color_value = 1
-end
-
-
-
 
 
 --local ids_dof_near_plane = Idstring("near_plane")
@@ -293,4 +222,4 @@ end
 
 function CoreEnvironmentControllerManager:clbk_screenflash_color_changed(setting_name, old_color_name, new_color_name)
 	self:set_screenflash_color(new_color_name)
-end--]]
+end
